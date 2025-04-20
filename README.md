@@ -1,12 +1,17 @@
-# GlobePay Offline Transaction Mesh Network
+# Offline Transaction Mesh Network dApp
 
-An offline-first transaction system that enables users to send and receive payments without internet connectivity via QR codes or USSD-like interfaces, ensuring seamless synchronization with blockchain once online. Transactions can also propagate through a peer-to-peer mesh network when multiple devices are nearby.
+A user-friendly, futuristic decentralized app (dApp) for sending and receiving payments, managing collateral, and tracking activity—even when offline—using a mesh network of validators.
+
+---
 
 ## Features
+- **Batch Payments:** Send multiple payments at once with a simple copy-paste.
+- **Easy Collateral Management:** Deposit and withdraw collateral with one click.
+- **Live Dashboard:** See your GPT token balance, network stats, and activity feed in real time.
+- **Beginner-Friendly:** Clear instructions, examples, and tips at every step.
+- **Futuristic UI:** Neon-glow, mesh backgrounds, and mobile-friendly design.
 
-- **Offline Transactions**: Complete transactions without internet connectivity
-- **QR Code Interface**: Generate and scan QR codes for peer-to-peer transfers
-- **USSD Simulation**: Feature phone-style interface using numeric codes
+---
 - **Mesh Network**: Peer-to-peer transaction propagation between nearby devices
 - **Cryptographic Security**: EdDSA signatures to prevent tampering and ensure transaction integrity
 - **Automatic Sync**: Background synchronization with blockchain when connectivity is restored

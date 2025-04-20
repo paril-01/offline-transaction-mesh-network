@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/send/page": "app/send/page.js",
+  "/transactions/page": "app/transactions/page.js",
+  "/receive/page": "app/receive/page.js",
+  "/ussd/page": "app/ussd/page.js"
+}

@@ -2,32 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Futuristic font for headings */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
 :root {
-  --primary-color: #0070f3;
-  --secondary-color: #ff4081;
-  --background-color: #f7f7f7;
+  --primary-color: #00fff7;
+  --secondary-color: #a259ff;
+  --background-color: #0b0c10;
 }
 
 body {
+  background: #0b0c10;
+  color: #e0e6f7;
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+h1, h2, .font-bold {
+  font-family: 'Orbitron', 'Segoe UI', 'Arial', sans-serif;
+  letter-spacing: 0.03em;
+}
+
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition-all;
+    @apply bg-cyan-600 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-cyan-500 hover:shadow-lg transition-all;
+    text-shadow: 0 0 8px #00fff7;
+    box-shadow: 0 0 16px #00fff7aa;
   }
-  
   .btn-secondary {
-    @apply bg-secondary text-white font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition-all;
+    @apply bg-purple-700 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-purple-500 hover:shadow-lg transition-all;
+    text-shadow: 0 0 8px #a259ff;
+    box-shadow: 0 0 12px #a259ffaa;
   }
-  
-  .card {
-    @apply bg-white p-4 rounded-lg shadow-md;
+  .card, .futuristic-card {
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(20, 20, 40, 0.6);
+    backdrop-filter: blur(18px) saturate(1.5);
+    @apply p-4 rounded-lg;
   }
-  
   .input-field {
-    @apply w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
+    @apply w-full p-2 border border-cyan-400 rounded-md bg-[#191c24] text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-400;
+    box-shadow: 0 0 6px #00fff733;
   }
-} 
+}
+
+@keyframes mesh-bg {
+  0% {
+    filter: blur(40px) brightness(1.1);
+    opacity: 0.9;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    filter: blur(60px) brightness(1.2);
+    opacity: 1;
+    transform: scale(1.04) rotate(3deg);
+  }
+  100% {
+    filter: blur(40px) brightness(1.1);
+    opacity: 0.9;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-mesh-bg {
+  animation: mesh-bg 10s ease-in-out infinite;
+  background: radial-gradient(circle at 60% 40%, #00f2fe44 0%, #4facfe22 60%, transparent 100%),
+              radial-gradient(circle at 30% 70%, #43e97b33 0%, #38f9d733 60%, transparent 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #15171c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2233;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .futuristic-card, .card {
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
